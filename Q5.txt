@@ -1,0 +1,33 @@
+Q5.Write a program to find the area of a circle, rectangle, and triangle.
+
+        public class Area{
+            public static void main(String[] args){
+
+            double length =6;
+            double radius =10;
+            double breadth =15;
+            double height =12;
+            double base =4;
+
+            double areaCircle=0;
+            double areaRectangle=0;
+            double areaTriangle=0;
+
+            areaCircle = (22/7)*(radius*radius);
+
+            areaRectangle= length*breadth;
+
+            areaTriangle = (1/2)*base*height;
+
+            
+
+            System.out.println("The area of circle is:"+areaCircle);
+
+            System.out.println("The area of rectangle is:"+areaRectangle);
+
+            System.out.println("The area of triangle is:"+areaTriangle);
+
+            }
+
+        }
+

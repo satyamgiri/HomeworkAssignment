@@ -1,0 +1,31 @@
+8. Write a program that reads the radius and length of a cylinder and computes volume.
+
+import java.util.Scanner;
+
+public class Conversion{
+    public static void main(String[] args)
+    {
+        
+        double calculateFahrenheit, calculateCelsius =0;
+
+        Scanner input =new Scanner(System.in);
+        System.out.print("Input Fahrenheit value:");
+
+        double F =input.nextDouble();
+        
+        System.out.print("Input celsius value :");
+        double C =input.nextDouble();
+
+
+calculateFahrenheit = C*(9/5) + 32;
+calculateCelsius = (F-32) *.5556 ;
+
+System.out.println("The  Fahrenheit value is: "+calculateFahrenheit+ "F");
+
+System.out.println("The Celsius value is: "+calculateCelsius+ "C");
+
+
+    }
+}
+        
+     

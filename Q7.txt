@@ -1,0 +1,26 @@
+7. Write a program that reads the radius and length of a cylinder and computes volume.
+
+
+ import java.util.Scanner;
+
+ public class Calculation{
+    public static void main(String[] args)
+    {
+        
+        double volume=0;
+
+        Scanner input =new Scanner(System.in);
+        System.out.print("Input radius of cylinder:");
+        double r =input.nextDouble();
+        
+        System.out.print("Input length of cylinder :");
+        double l =input.nextDouble();
+
+	volume = (22/7)*(r*r)*l;
+
+         
+        
+        System.out.println("The volume of cylinder  is: "+volume);
+        }
+     }
+

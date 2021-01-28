@@ -1,0 +1,29 @@
+16. Write a program to find the given number is even or odd.
+
+import java.util.Scanner;
+
+public class EvenOrOdd {
+public static void main( String args[] )    {
+            
+        Scanner input = new Scanner(System.in);
+        int number1; 
+        
+      
+        System.out.print( "Input first integer: " ); 
+   
+        number1 = input.nextInt();   
+ 
+                      
+        
+        if (( number1) /2 == 0 ) {          
+            System.out.printf( "The number is even" ); 
+         	}
+
+	else{ 
+             System.out.println( "The number is odd" );  
+     		}
+
+
+    	}
+  }
+  

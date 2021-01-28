@@ -1,0 +1,9 @@
+1.Write a program to display Greetings in three lines.
+
+public class Hello{
+
+     public static void main(String []args){
+        System.out.println("Hello ! \nSatyam Giri");
+     }
+
+}

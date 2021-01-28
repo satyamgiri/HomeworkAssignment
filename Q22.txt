@@ -1,0 +1,20 @@
+22. Write a program to print the table of given numbers.
+
+import java.util.Scanner;
+
+public class MultiplicationTable {
+
+    public static void main(String[] args) {double volume=0;
+
+        Scanner input =new Scanner(System.in);
+        System.out.print("Input the Number:");
+
+        double num =input.nextDouble();
+     
+
+        for(int i = 1; i <= 10; ++i)
+        {
+            System.out.printf("%d * %d = %d \n", num, i, num * i);
+        }
+    }
+}

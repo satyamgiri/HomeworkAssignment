@@ -1,0 +1,37 @@
+17.Write a program to calculate leap year.
+
+public class Main {
+
+  public static void main(String[] args) {
+
+    
+    int year = 2000;
+    boolean leap = false;
+
+    //first loop
+    if (year % 4 == 0) {
+
+            if (year % 100 == 0) {
+
+        
+        if (year % 400 == 0)// if year is divided by 400
+        			// then it is a leap year
+          leap = true;
+        else
+          leap = false;
+      }
+      
+      // if the year is not century
+      else
+        leap = true;
+    }
+    
+    else
+      leap = false;
+
+    if (leap)
+      System.out.println(year + " is a leap year.");
+    else
+      System.out.println(year + " is not a leap year.");
+  }
+}

@@ -1,0 +1,7 @@
+2.Write a program to display your Introduction in three lines.
+
+public class Intro{
+    public static void main(String []args){
+        System.out.println("I am from Nepal\nI graduated in 2020 Dec Fall session\nI am taking java classes at Vastika");
+    }
+}

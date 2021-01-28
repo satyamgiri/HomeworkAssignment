@@ -1,0 +1,30 @@
+4. Write a program to calculate Simple Interest input by the user. Simple Interest = P*T*R/100
+
+
+import java.util.Scanner;
+
+public class SimpleInterest{
+    public static void main(String[] args)
+    {
+        double interest =0;
+        double average;
+        Scanner input =new Scanner(System.in);
+        
+        System.out.print("Input Principle value:");
+        double p =input.nextDouble();
+        
+        System.out.print("Input Time :");
+        double t =input.nextDouble();
+        
+         System.out.print("Input Rate:");
+        double r =input.nextDouble();
+        
+        
+        interest =(p*t*r)/100;
+        
+        System.out.println("The interest is:"+interest);
+        
+        
+
+        }
+     }
