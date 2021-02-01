@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String name;
+        String nationality;
+        Double rollNumber;
+        Scanner myObj = new Scanner(System.in);  // Create a Scanner object
+
+        System.out.println("Enter your nationality:");
+        nationality = myObj.nextLine();
+
+        System.out.println("Enter your name:");
+        name = myObj.nextLine();  // Read user input
+
+        System.out.println("Enter your rollNumber:");
+        rollNumber = myObj.nextDouble();
+
+
+        System.out.println("The name of person is: " + name + " His roll number is " +rollNumber +" and your nationality is" + nationality);  // Output user input
+    }
+}
