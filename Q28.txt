@@ -1,0 +1,116 @@
+28. Write a program in a single class having the following functions.
+a.isPrimenumber(int)
+b.firstNthPrime(int )
+c.allPrimebetween(int start , int  end)
+
+
+a. import java.util.Scanner;
+
+public class PrimeCheckValue{
+   public static void main(String args[])
+   {		
+	int temp;
+	boolean isPrime=true;
+	Scanner scan= new Scanner(System.in);
+	System.out.println("Enter any number:");
+	
+
+	int num=scan.nextInt();
+        scan.close();
+	for(int i=2;i<=num/2;i++)
+	{
+           temp=num%i;
+	   if(temp==0)
+	   {
+	      isPrime=false;
+	      break;
+	   }
+	}
+	if(isPrime)
+	   System.out.println(num + " is a Prime Number");
+	else
+	   System.out.println(num + " is not a Prime Number");
+   }
+}
+
+b.
+
+import java.util.Scanner;
+
+public class PrimeCheck{
+   public static void main(String args[]){
+
+      int n;
+      int status = 1;
+      int num = 3;
+    
+      Scanner scanner = new Scanner(System.in);
+      System.out.println("Enter the value of n:");
+   
+      n = scanner.nextInt();
+      if (n >= 1){
+         System.out.println("First "+n+" prime numbers are:");
+         
+         System.out.println(2);
+      }
+
+      for ( int i = 2 ; i <=n ;  )
+      {
+         for ( int j = 2 ; j <= Math.sqrt(num) ; j++ )
+         {
+            if ( num%j == 0 )
+            {
+               status = 0;
+               break;
+            }
+         }
+         if ( status != 0 )
+         {
+            System.out.println(num);
+            i++;
+         }
+         status = 1;
+         num++;
+      }         
+   }
+}
+
+c. allPrimebetween(int start , int  end)
+
+
+import java.util.Scanner;
+
+public class PrimeNumbers2
+{
+   public static void main (String[] args)
+   {		
+      Scanner scanner = new Scanner(System.in);
+      int i =0;
+      int num =0;
+      
+      String  primeNumbers = "";
+
+      System.out.println("Enter the value of n:");
+
+      int n = scanner.nextInt();
+      scanner.close();
+      for (i = 1; i <= n; i++)  	   
+      { 		 		  
+         int counter=0; 		  
+         for(num =i; num>=1; num--)
+         {
+	    if(i%num==0)
+	    {
+		counter = counter + 1;
+	    }
+	 }
+	 if (counter ==2)
+	 {
+	    //Appended the Prime number to the String
+	    primeNumbers = primeNumbers + i + " ";
+	 }	
+      }	
+      System.out.println("Prime numbers from 1 to n are :");
+      System.out.println(primeNumbers);
+   }
+}

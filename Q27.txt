@@ -1,0 +1,22 @@
+27. Write a Program to sum each digit of given number as well as product. //456 =>4*5*6 and 4+5+6
+
+import java.util.Scanner;
+public class DigitSumAndProduct {
+    public static void main(String args[])
+    {
+        int m, n, sum = 0; int product=1;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the number:");
+        m = s.nextInt();
+        while(m > 0)
+        {
+            n = m % 10;
+            sum = sum + n;
+		product = product*n;
+            m = m / 10;
+
+        }
+        System.out.println("Sum of Digits:"+sum);
+	System.out.println("Product of number:"+product);
+    }
+}

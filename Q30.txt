@@ -1,0 +1,29 @@
+30. Write a program to print the Fibonacci series. 1 1 2 3 5 8 ….
+
+
+import java.util.Scanner;
+
+
+    public class Main {
+
+        public static void main(String[] args) {
+
+            Scanner input =new Scanner(System.in);
+            System.out.print("Input number for which you want to calculate fibonacci:");
+
+            int count =input.nextInt();
+
+
+            System.out.print("Fibonacci Series of "+count+" numbers:");
+
+            int num1 = 0; int num2 = 1; int sumOfPrevTwo =0;
+            for (int i = 1; i <= count; ++i)
+            {
+                System.out.print(num1+" ");
+
+                sumOfPrevTwo = num1 + num2;
+                num1 = num2;
+                num2 = sumOfPrevTwo;
+            }
+        }
+    }
