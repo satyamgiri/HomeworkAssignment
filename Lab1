@@ -1,0 +1,110 @@
+ //BankAccountCreation class
+
+class BankAccountCreation{
+    
+
+    private String accountNumber; 
+    private double balance;	   
+    
+    public BankAccount(String acctNum, double initialBalance)
+    {
+        accountNumber = acctNum;
+        balance = initialBalance;
+    }
+
+        public void deposit(double amount)	    {
+        double newBalance = balance + amount;
+        balance = newBalance;							
+    }
+
+    
+    public void withdraw(double amount)	
+    {
+        double newBalance = balance - amount;
+        balance = newBalance;			
+    }
+
+    
+    public String getAccount()	
+    {
+        return accountNum;		    }
+
+        public double getBalance()	
+    {
+        return balance;			
+    }
+
+    
+    public void transferFundstoA(BankAccount destination, double amount)
+    {
+        destination.balance = destination.balance + amount;
+        
+        this.balance = this.balance - amount;
+    }
+
+        public void transferFundstoB(BankAccount destination, double amount)
+    {
+        destination.deposit(amount);	
+        this.withdraw(amount);           
+    }
+}
+
+
+// introducing another class
+
+
+public class BankAccountTest
+{
+
+    public static void main(String[] args)
+    {
+                BankAccount first = new BankAccount("100034", 1500);
+        BankAccount second = new BankAccount("1234567", 40000);
+
+        
+        System.out.printf("Account #%s has initial balance of $%.2f%n",
+                first.getAccount(), first.getBalance());
+
+        System.out.printf("Account #%s has initial balance of $%.2f%n",
+                second.getAccount(), second.getBalance());
+
+        
+        first.transferFundsA(second, 5000);
+
+        
+        System.out.println("\nAfter \"first.transferFunds(second, 5000)\" ...");
+        System.out.printf("Account #%s has new balance of $%.2f%n",
+                first.getAccount(), first.getBalance());
+
+        System.out.printf("Account #%s has new balance of $%.2f%n",
+                second.getAccount(), second.getBalance());
+
+        
+        second.transferFundsB(first, 10000);
+
+        
+        System.out.println("\nAfter \"second.transferFunds(first, 10000)\" ...");
+        System.out.printf("Account #%s has new balance of $%.2f%n",
+                first.getAccount(), first.getBalance());
+
+        System.out.printf("Account #%s has new balance of $%.2f%n",
+                second.getAccount(), second.getBalance());
+    }
+}
+
+/* program output
+
+Account #100034 has initial balance of $1500.00
+Account #1234567 has initial balance of $40,000.00
+
+After "first.transferFundsA(second, 5000)" ...
+
+Account #1111111 has new balance of $5,500.00
+Account #2222222 has new balance of $45,000.00
+
+After "second.transferFundsB(first, 5000)" ...
+
+Account #1111111 has new balance of $10,500.00
+Account #2222222 has new balance of $50,000.00
+
+*/
